@@ -73,7 +73,7 @@ plugins=(
 	git
 	colored-man-pages
 	golang
-	# zsh-autosuggestions
+	zsh-autosuggestions
 	vi-mode
 )
 
