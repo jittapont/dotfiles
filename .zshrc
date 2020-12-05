@@ -123,4 +123,4 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin 
 NODEJS_HOME=/usr/local/lib/node/nodejs
 export PATH=$PATH:$NODEJS_HOME/bin
-
+export PATH=$PATH:/usr/local/go/bin
