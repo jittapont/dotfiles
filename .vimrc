@@ -2,6 +2,9 @@ syntax on
 
 set completeopt-=preview
 
+"Replace tab with 2 spaces
+set tabstop=2 shiftwidth=2 expandtab
+
 "Highlight search
 set hlsearch
 
