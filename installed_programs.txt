@@ -10,3 +10,5 @@ indicator-multiload
 fondo
 dbeaver
 remmina
+flameshot
+emacs
