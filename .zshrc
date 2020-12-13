@@ -112,6 +112,7 @@ alias l='ls -CF'
 alias ipv4='curl https://ipv4.icanhazip.com/'
 alias ipv6='curl https://ipv6.icanhazip.com/'
 alias dim='xrandr --output eDP --brightness '
+alias screen='xrandr -s 1440x900'
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
