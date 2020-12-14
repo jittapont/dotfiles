@@ -12,3 +12,4 @@ dbeaver
 remmina
 flameshot
 emacs
+xclip
