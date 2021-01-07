@@ -17,3 +17,4 @@ This is my z shell and vim config files
 13. flameshot
 14. emacs
 15. xclip
+16. ncdu
