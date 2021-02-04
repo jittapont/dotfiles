@@ -18,3 +18,5 @@ This is my z shell and vim config files
 14. emacs
 15. xclip
 16. ncdu
+17. docekr
+18. Oh My Zsh
