@@ -113,8 +113,14 @@ alias ipv4='curl https://ipv4.icanhazip.com/'
 alias ipv6='curl https://ipv6.icanhazip.com/'
 alias dim='xrandr --output eDP --brightness '
 alias screen='xrandr -s 1440x900'
-alias gst='git status'
-alias gp='git push'
+alias goim='goimports -w $(find . -type f -name *.go -not -path "./vendor/*")'
+alias gov='go vet *.go'
+alias golint='golangci-lint run'
+alias gotest='go test -cover -v ./...'
+alias gocov='go test -race -tags integration -cover -coverprofile=c.out ./... && go tool cover -html=c.out'
+alias gosec='gosec ./...'
+alias gorun='go run main.go'
+alias bat='batcat'
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
@@ -127,3 +133,4 @@ export PATH=$PATH:$HOME/.local/bin
 NODEJS_HOME=/usr/local/lib/node/nodejs
 export PATH=$PATH:$NODEJS_HOME/bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
