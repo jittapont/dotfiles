@@ -20,3 +20,5 @@ This is my z shell and vim config files
 16. ncdu
 17. docekr
 18. Oh My Zsh
+19. nodejs
+20. vim-plug
