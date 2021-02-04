@@ -1,5 +1,8 @@
 syntax on
 
+set nowrap           " do not automatically wrap on load
+set formatoptions-=t " do not automatically wrap text when typing
+
 set completeopt-=preview
 
 "Replace tab with 2 spaces
@@ -53,6 +56,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'davidhalter/jedi-vim'
 Plug 'raimondi/delimitmate'
+Plug 'govim/govim'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
