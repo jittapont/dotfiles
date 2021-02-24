@@ -18,7 +18,8 @@ This is my z shell and vim config files
 14. emacs
 15. xclip
 16. ncdu
-17. docekr
+17. docker
 18. Oh My Zsh
-19. nodejs
+19. nodejs and npm
 20. vim-plug
+21. libreOffice
