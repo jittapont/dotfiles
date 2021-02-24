@@ -23,3 +23,6 @@ This is my z shell and vim config files
 19. nodejs and npm
 20. vim-plug
 21. libreOffice
+22. bat
+23. ripgrep
+24. tree
