@@ -121,17 +121,17 @@ alias gocov='go test -race -tags integration -cover -coverprofile=c.out ./... &&
 alias gocov2='go test -race -cover $(go list ./... | grep -v /vendor/) -coverprofile=c.out && go tool cover -func c.out'
 alias gosec='gosec ./...'
 alias gorun='go run main.go'
-alias bat='batcat'
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 
 # Environment variables
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin 
-NODEJS_HOME=/usr/local/lib/node/nodejs
+export NODEJS_HOME=/usr/local/lib/node/nodejs
 export PATH=$PATH:$NODEJS_HOME/bin
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.cargo/bin
