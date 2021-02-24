@@ -1,5 +1,7 @@
 syntax on
 
+set backspace=indent,eol,start " make backspace working in insert mode
+
 set nowrap           " do not automatically wrap on load
 set formatoptions-=t " do not automatically wrap text when typing
 
