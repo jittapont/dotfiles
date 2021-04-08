@@ -26,3 +26,5 @@ This is my z shell and vim config files
 22. bat
 23. ripgrep
 24. tree
+25. insomnia rest
+26. qbittorrent
