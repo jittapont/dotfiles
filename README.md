@@ -28,3 +28,8 @@ This is my z shell and vim config files
 24. tree
 25. insomnia rest
 26. qbittorrent
+27. Go
+28. Rust
+29. Goland
+30. Python
+31. bitwarden
