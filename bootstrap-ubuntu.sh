@@ -38,9 +38,6 @@ source $USER_HOME/.cargo/env
 export PATH=$PATH:$USER_HOME/.cargo/bin
 chown -R $SUDO_USER:$SUDO_USER $USER_HOME/.cargo/bin
 
-echo "Installing ripgrep"
-cargo install ripgrep
-
 echo "Installing insomnia rest client"
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
     | tee -a /etc/apt/sources.list.d/insomnia.list
