@@ -19,7 +19,8 @@ apt-get -y update && apt-get -y upgrade && apt-get install -y htop \
   xclip \
   ncdu \
   bat \
-  tree
+  tree \
+  curl
 
 echo "Installing python"
 add-apt-repository -y ppa:deadsnakes/ppa
