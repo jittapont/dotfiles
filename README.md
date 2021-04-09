@@ -1,6 +1,16 @@
 ### About
 This is my z shell and vim config files
 
+## How to use bootstrap script
+1. run bootstrap-ubuntu.sh
+```bash
+  sudo ./bootstrap-ubuntu.sh
+```
+3. after that install vim plugins
+```bash
+  vim +PlugInstall
+```
+
 ### Installed programs
 1. brave-browser
 2. flatpak
