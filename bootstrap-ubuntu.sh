@@ -79,6 +79,7 @@ code --install-extension streetsidesoftware.code-spell-checker
 echo "Installing vim-plug"
 curl -fLo $USER_HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 chown -R $SUDO_USER:$SUDO_USER $USER_HOME/.vim
+vim +PlugInstall +qall +silent
 
 echo "Installing zsh and other zsh plugins"
 apt-get install -y zsh
