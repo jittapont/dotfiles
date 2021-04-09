@@ -1,3 +1,5 @@
+USER_HOME=$(eval echo ~${SUDO_USER})
+
 echo "Update and upgrade and install some basic applications"
 apt-get -y update && apt-get -y upgrade && apt-get install -y htop \
   terminator \
@@ -74,10 +76,11 @@ apt-get install -y zsh
 chsh -s $(which zsh)
 
 echo "Installing oh my zsh"
+export ZSH=$USER_HOME/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 echo "Installing zsh-autosuggestions"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$USER_HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo "Installing zsh-syntax-highlighting"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
@@ -127,7 +130,6 @@ git config --global user.email $GIT_EMAIL
 git config --global user.name $GIT_USERNAME
 
 echo "Replace zshrc, vimrc, bashrc"
-USER_HOME=$(eval echo ~${SUDO_USER})
 git clone https://github.com/jittapont/dotfiles.git
 rm .bashrc .vimrc .zshrc
 ln -s $USER_HOME/dotfiles/.vimrc $USER_HOME/.vimrc
