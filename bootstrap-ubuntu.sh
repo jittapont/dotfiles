@@ -87,9 +87,11 @@ sed -i "s|$USER_HOME:/bin/bash|$USER_HOME:/bin/zsh|" /etc/passwd
 echo "Installing oh my zsh"
 export ZSH=$USER_HOME/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+chown -R $SUDO_USER:$SUDO_USER .oh-my-zsh
 
 echo "Installing zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$USER_HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+chown -R $SUDO_USER:$SUDO_USER .oh-my-zsh
 
 echo "Installing zsh-syntax-highlighting"
 apt-get install -y zsh-syntax-highlighting
