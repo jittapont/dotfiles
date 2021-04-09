@@ -66,6 +66,7 @@ apt-get -y update
 apt-get install -y code
 
 echo "Installing visualstudio code plugins"
+chown -R $SUDO_USER:$SUDO_USER $USER_HOME/vscode
 code --install-extension ms-python.python
 code --install-extension vscodevim.vim
 code --install-extension ms-azuretools.vscode-docker
