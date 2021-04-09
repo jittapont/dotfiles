@@ -97,6 +97,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $USER_HOME/.o
 # change owner of oh-my-zsh folder
 chown -R $SUDO_USER:$SUDO_USER .oh-my-zsh
 
+echo "Installing flatpak"
+apt-get install -y flatpak gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 echo "Installing flatpak applications"
 flatpak install -y flathub com.github.calo001.fondo
 flatpak install -y flathub io.dbeaver.DBeaverCommunity
@@ -110,10 +114,6 @@ curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] \
   https://brave-browser-apt-release.s3.brave.com/ stable main"| tee /etc/apt/sources.list.d/brave-browser-release.list
 apt-get -y update && apt-get install -y brave-browser
-
-echo "Installing flatpak"
-apt-get install -y flatpak gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "Installing docker"
 apt-get install -y \
