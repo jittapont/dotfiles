@@ -48,6 +48,7 @@ apt-get -y update && apt-get install -y insomnia
 echo "Installing golang"
 wget https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
 
 echo "Installing Goland"
 wget https://download.jetbrains.com/go/goland-2020.3.4.tar.gz
