@@ -76,9 +76,8 @@ su -c "code --install-extension streetsidesoftware.code-spell-checker" $SUDO_USE
 chown -R $SUDO_USER:$SUDO_USER $USER_HOME/vscode
 
 echo "Installing vim-plug"
-curl -fLo $USER_HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+su -c "curl -fLo $USER_HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" $SUDO_USER
 chown -R $SUDO_USER:$SUDO_USER $USER_HOME/.vim
-su -c "vim +PlugInstall" $SUDO_USER
 
 echo "Installing zsh and other zsh plugins"
 apt-get install -y zsh
@@ -147,9 +146,9 @@ git config --global user.email $GIT_EMAIL
 git config --global user.name $GIT_USERNAME
 
 echo "Replace zshrc, vimrc, bashrc"
+rm .bashrc .vimrc .zshrc
 su -c "git clone https://github.com/jittapont/dotfiles.git; ln -s $USER_HOME/dotfiles/.vimrc $USER_HOME/.vimrc; ln -s $USER_HOME/dotfiles/.bashrc $USER_HOME/.bashrc; ln -s $USER_HOME/dotfiles/.zshrc $USER_HOME/.zshrc" $SUDO_USER
 chown -R $SUDO_USER:$SUDO_USER $USER_HOME/dotfiles
-rm .bashrc .vimrc .zshrc
 
 echo "Clean up files"
 rm *.tar.gz
