@@ -65,15 +65,15 @@ apt-get -y update
 apt-get install -y code
 
 echo "Installing visualstudio code plugins"
+su -c "code --install-extension ms-python.python" $SUDO_USER
+su -c "code --install-extension vscodevim.vim" $SUDO_USER
+su -c "code --install-extension ms-azuretools.vscode-docker" $SUDO_USER
+su -c "code --install-extension golang.go" $SUDO_USER
+su -c "code --install-extension rust-lang.rust" $SUDO_USER
+su -c "code --install-extension redhat.vscode-yaml" $SUDO_USER
+su -c "code --install-extension coenraads.bracket-pair-colorizer" $SUDO_USER
+su -c "code --install-extension streetsidesoftware.code-spell-checker" $SUDO_USER
 chown -R $SUDO_USER:$SUDO_USER $USER_HOME/vscode
-code --install-extension ms-python.python
-code --install-extension vscodevim.vim
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension golang.go
-code --install-extension rust-lang.rust
-code --install-extension redhat.vscode-yaml
-code --install-extension coenraads.bracket-pair-colorizer
-code --install-extension streetsidesoftware.code-spell-checker
 
 echo "Installing vim-plug"
 curl -fLo $USER_HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
