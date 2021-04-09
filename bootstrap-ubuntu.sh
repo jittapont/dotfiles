@@ -1,3 +1,4 @@
+#!/bin/bash
 USER_HOME=$(eval echo ~${SUDO_USER})
 
 echo "Update and upgrade and install some basic applications"
