@@ -84,7 +84,9 @@ echo "Installing zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$USER_HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo "Installing zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $USER_HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+# change owner of oh-my-zsh folder
+chown -R $SUDO_USER:$SUDO_USER .oh-my-zsh
 
 echo "Installing flatpak applications"
 flatpak install -y flathub com.github.calo001.fondo
