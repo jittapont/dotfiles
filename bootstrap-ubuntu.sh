@@ -24,7 +24,7 @@ apt-get update && apt-get install -y ulauncher
 # need to install system management direct extension from https://github.com/episode6/ulauncher-system-management-direct
 
 echo "Installing rust"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
 
 echo "Installing ripgrep"
 cargo install ripgrep
