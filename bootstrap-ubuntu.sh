@@ -152,3 +152,6 @@ rm .bashrc .vimrc .zshrc
 ln -s $USER_HOME/dotfiles/.vimrc $USER_HOME/.vimrc
 ln -s $USER_HOME/dotfiles/.bashrc $USER_HOME/.bashrc
 ln -s $USER_HOME/dotfiles/.zshrc $USER_HOME/.zshrc
+
+echo "Clean up files"
+rm *.tar.gz
