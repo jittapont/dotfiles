@@ -68,13 +68,14 @@ code --install-extension coenraads.bracket-pair-colorizer
 code --install-extension streetsidesoftware.code-spell-checker
 
 echo "Installing vim-plug"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo $USER_HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "Installing zsh and other zsh plugins"
 apt-get install -y zsh
-# change default shell to zsh instead of bash
+
+echo "Changing default shell to zsh instead of bash"
 chsh -s $(which zsh)
+sed -i "s|$USER_HOME:/bin/bash|$USER_HOME:/bin/zsh|" /etc/passwd
 
 echo "Installing oh my zsh"
 export ZSH=$USER_HOME/.oh-my-zsh
