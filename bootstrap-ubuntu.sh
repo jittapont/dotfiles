@@ -86,7 +86,8 @@ echo "Installing flatpak applications"
 flatpak install flathub com.github.calo001.fondo \
   io.dbeaver.DBeaverCommunity \
   org.remmina.Remmina \
-  org.libreoffice.LibreOffice
+  org.libreoffice.LibreOffice \
+  com.bitwarden.desktop
 
 echo "Installing brave browser"
 apt-get install -y apt-transport-https curl
@@ -126,8 +127,9 @@ git config --global user.email $GIT_EMAIL
 git config --global user.name $GIT_USERNAME
 
 echo "Replace zshrc, vimrc, bashrc"
+USER_HOME=$(eval echo ~${SUDO_USER})
 git clone https://github.com/jittapont/dotfiles.git
 rm .bashrc .vimrc .zshrc
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.bashrc ~/.bashrc
-ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ${USER_HOME}/dotfiles/.vimrc ~/.vimrc
+ln -s ${USER_HOME}/dotfiles/.bashrc ~/.bashrc
+ln -s ${USER_HOME}/dotfiles/.zshrc ~/.zshrc
