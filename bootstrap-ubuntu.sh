@@ -1,6 +1,11 @@
 #!/bin/bash
 USER_HOME=$(eval echo ~${SUDO_USER})
 
+echo "Enter git email"
+read GIT_EMAIL
+echo "Enter git username"
+read GIT_USERNAME
+
 echo "Update and upgrade and install some basic applications"
 apt-get -y update && apt-get -y upgrade && apt-get install -y htop \
   terminator \
