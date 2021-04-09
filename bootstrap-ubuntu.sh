@@ -83,11 +83,11 @@ echo "Installing zsh-syntax-highlighting"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 echo "Installing flatpak applications"
-flatpak install flathub com.github.calo001.fondo \
-  io.dbeaver.DBeaverCommunity \
-  org.remmina.Remmina \
-  org.libreoffice.LibreOffice \
-  com.bitwarden.desktop
+flatpak install -y flathub com.github.calo001.fondo
+flatpak install -y flathub io.dbeaver.DBeaverCommunity
+flatpak install -y flathub org.remmina.Remmina
+flatpak install -y flathub org.libreoffice.LibreOffice
+flatpak install -y flathub com.bitwarden.desktop
 
 echo "Installing brave browser"
 apt-get install -y apt-transport-https curl
