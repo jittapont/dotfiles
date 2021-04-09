@@ -34,6 +34,7 @@ apt-get update && apt-get install -y ulauncher
 
 echo "Installing rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
+export PATH=$PATH:$USER_HOME/.cargo/bin
 
 echo "Installing ripgrep"
 cargo install ripgrep
