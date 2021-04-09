@@ -34,6 +34,7 @@ apt-get update && apt-get install -y ulauncher
 
 echo "Installing rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
+source $USER_HOME/.cargo/env
 export PATH=$PATH:$USER_HOME/.cargo/bin
 chown -R $SUDO_USER:$SUDO_USER $USER_HOME/.cargo/bin
 
