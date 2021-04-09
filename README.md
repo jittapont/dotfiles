@@ -33,3 +33,4 @@ This is my z shell and vim config files
 29. Goland
 30. Python
 31. bitwarden
+32. ulauncher

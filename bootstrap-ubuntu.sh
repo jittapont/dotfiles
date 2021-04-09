@@ -15,8 +15,13 @@ apt-get -y update && apt-get -y upgrade && apt-get install -y htop \
 
 echo "Installing python"
 add-apt-repository -y ppa:deadsnakes/ppa
-apt-get -y update
+apt-get update
 apt-get install -y python3.8-dev python3-pip
+
+echo "Installing ulauncher"
+add-apt-repository -y ppa:agornostal/ulauncher
+apt-get update && apt-get install -y ulauncher
+# need to install system management direct extension from https://github.com/episode6/ulauncher-system-management-direct
 
 echo "Installing rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
