@@ -35,6 +35,7 @@ apt-get update && apt-get install -y ulauncher
 echo "Installing rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
 export PATH=$PATH:$USER_HOME/.cargo/bin
+chown -R $SUDO_USER:$SUDO_USER $USER_HOME/.cargo/bin
 
 echo "Installing ripgrep"
 cargo install ripgrep
@@ -76,6 +77,7 @@ code --install-extension streetsidesoftware.code-spell-checker
 
 echo "Installing vim-plug"
 curl -fLo $USER_HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+chown -R $SUDO_USER:$SUDO_USER $USER_HOME/.vim
 
 echo "Installing zsh and other zsh plugins"
 apt-get install -y zsh
@@ -145,6 +147,7 @@ git config --global user.name $GIT_USERNAME
 
 echo "Replace zshrc, vimrc, bashrc"
 git clone https://github.com/jittapont/dotfiles.git
+chown -R $SUDO_USER:$SUDO_USER $USER_HOME/dotfiles
 rm .bashrc .vimrc .zshrc
 ln -s $USER_HOME/dotfiles/.vimrc $USER_HOME/.vimrc
 ln -s $USER_HOME/dotfiles/.bashrc $USER_HOME/.bashrc
