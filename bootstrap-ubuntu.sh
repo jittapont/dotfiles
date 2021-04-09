@@ -149,6 +149,9 @@ echo "Replace zshrc, vimrc, bashrc"
 git clone https://github.com/jittapont/dotfiles.git
 chown -R $SUDO_USER:$SUDO_USER $USER_HOME/dotfiles
 rm .bashrc .vimrc .zshrc
+chown $SUDO_USER:$SUDO_USER $USER_HOME/.vimrc
+chown $SUDO_USER:$SUDO_USER $USER_HOME/.bashrc
+chown $SUDO_USER:$SUDO_USER $USER_HOME/.zshrc
 ln -s $USER_HOME/dotfiles/.vimrc $USER_HOME/.vimrc
 ln -s $USER_HOME/dotfiles/.bashrc $USER_HOME/.bashrc
 ln -s $USER_HOME/dotfiles/.zshrc $USER_HOME/.zshrc
