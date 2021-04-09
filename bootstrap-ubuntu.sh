@@ -130,6 +130,6 @@ echo "Replace zshrc, vimrc, bashrc"
 USER_HOME=$(eval echo ~${SUDO_USER})
 git clone https://github.com/jittapont/dotfiles.git
 rm .bashrc .vimrc .zshrc
-ln -s ${USER_HOME}/dotfiles/.vimrc ~/.vimrc
-ln -s ${USER_HOME}/dotfiles/.bashrc ~/.bashrc
-ln -s ${USER_HOME}/dotfiles/.zshrc ~/.zshrc
+ln -s $USER_HOME/dotfiles/.vimrc $USER_HOME/.vimrc
+ln -s $USER_HOME/dotfiles/.bashrc $USER_HOME/.bashrc
+ln -s $USER_HOME/dotfiles/.zshrc $USER_HOME/.zshrc
