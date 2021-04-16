@@ -20,7 +20,8 @@ apt-get -y update && apt-get -y upgrade && apt-get install -y htop \
   ncdu \
   bat \
   tree \
-  curl
+  curl \
+  gnome-tweaks
 
 echo "Installing python"
 add-apt-repository -y ppa:deadsnakes/ppa
