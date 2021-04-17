@@ -21,7 +21,15 @@ apt-get -y update && apt-get -y upgrade && apt-get install -y htop \
   bat \
   tree \
   curl \
-  gnome-tweaks
+  gnome-tweaks \
+  apt-transport-https \
+  ca-certificates
+
+echo "Installing kubectl"
+curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+apt-get update
+sudo apt-get install -y kubectl
 
 echo "Installing python"
 add-apt-repository -y ppa:deadsnakes/ppa
