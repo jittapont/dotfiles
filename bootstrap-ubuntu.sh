@@ -23,7 +23,8 @@ apt-get -y update && apt-get -y upgrade && apt-get install -y htop \
   curl \
   gnome-tweaks \
   apt-transport-https \
-  ca-certificates
+  ca-certificates \
+  sqlite3
 
 echo "Installing kubectl"
 curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
