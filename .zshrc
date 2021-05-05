@@ -121,6 +121,7 @@ alias gocov='go test -race -tags integration -cover -coverprofile=c.out ./... &&
 alias gocov2='go test -race -cover $(go list ./... | grep -v /vendor/) -coverprofile=c.out && go tool cover -func c.out'
 alias gosec='gosec ./...'
 alias gorun='go run main.go'
+alias fmtjson='python3 -m json.tool'
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
